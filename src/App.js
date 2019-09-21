@@ -1,25 +1,20 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
-
+import React from "react";
+import "./App.css";
+import storeFactory from "./store";
+import { Provider } from "react-redux";
+import { BrowserRouter as Router, Route, Link } from "react-router-dom";
+import initialState from "./initialState";
+import TaskList from "./components/container/TaskList";
+import AddTask from "./components/container/AddTask";
+const store = storeFactory(initialState);
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Provider store={store}>
+      <Router>
+        <Route path="/" exact component={() => <TaskList tasks={[]} />} />
+        <Route path="/addtask" exact component={() => <AddTask />} />
+      </Router>
+    </Provider>
   );
 }
 

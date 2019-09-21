@@ -1,0 +1,57 @@
+ul,
+li {
+  list-style: none;
+  width: 250px;
+}
+ul li a {
+  text-decoration: none;
+  color: #000;
+  background: yellow;
+  display: flex;
+  padding: 1em;
+  flex-direction: column;
+  min-height: 250px;
+  justify-content: space-between;
+}
+ul li {
+  margin: 1em;
+  float: left;
+}
+ul li h2 {
+  font-size: 140%;
+  font-weight: bold;
+  padding-bottom: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: unset;
+  padding: unset;
+}
+ul li h2 input {
+  width: unset;
+}
+ul li input {
+  width: 100%;
+}
+ul li p {
+  font-family: "Reenie Beanie", arial, sans-serif;
+  font-size: 180%;
+  margin: 5px 0;
+}
+ul li a .actions {
+  margin-top: 10px;
+  display: flex;
+  justify-content: space-between;
+}
+button {
+  width: 100%;
+}
+
+label {
+  display: inline-block;
+  width: 100%;
+}
+form {
+  display: flex;
+  flex-direction: column;
+}

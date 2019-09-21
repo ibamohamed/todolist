@@ -1,0 +1,6 @@
+.task {
+  width: 50%;
+  border: 5px solid yellow;
+  display: block;
+  margin: auto;
+}
